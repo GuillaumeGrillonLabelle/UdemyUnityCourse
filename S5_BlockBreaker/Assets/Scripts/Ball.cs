@@ -2,41 +2,14 @@
 
 public class Ball : MonoBehaviour
 {
-	public Vector2 launchVelocity;
-
 	private Rigidbody2D rb;
 	private AudioSource bounceAudioSource;
-	private Paddle paddle;
-	private Vector3 intialPaddleToBallVector;
-	private bool ballLaunched;
-
-	private void Reset()
-	{
-		launchVelocity = new Vector2(2, 10);
-	}
 
 	void Start()
 	{
-		paddle = FindObjectOfType<Paddle>();
-		intialPaddleToBallVector = transform.position - paddle.transform.position;
 		rb = GetComponent<Rigidbody2D>();
 		rb.isKinematic = true;
 		bounceAudioSource = GetComponent<AudioSource>();
-	}
-
-	void Update()
-	{
-		if (!ballLaunched)
-		{
-			transform.position = paddle.transform.position + intialPaddleToBallVector;
-
-			if (Input.GetMouseButtonDown(0))
-			{
-				rb.isKinematic = false;
-				rb.velocity = launchVelocity;
-				ballLaunched = true;
-			}
-		}
 	}
 
 	private void OnCollisionExit2D(Collision2D other)
@@ -45,5 +18,23 @@ public class Ball : MonoBehaviour
 		{
 			bounceAudioSource.Play();
 		}
+
+		if (other.gameObject.GetComponent<Paddle>() != null)
+		{
+			if (Mathf.Approximately(rb.velocity.x, 0f))
+			{
+				rb.velocity = new Vector2(Random.Range(-5f, 5f), rb.velocity.y);
+			}
+			if (Mathf.Approximately(rb.velocity.y, 0f))
+			{
+				rb.velocity = new Vector2(rb.velocity.x, 10f);
+			}
+		}
+	}
+
+	public void Launch(Vector2 launchVelocity)
+	{
+		rb.isKinematic = false;
+		rb.velocity = launchVelocity;
 	}
 }

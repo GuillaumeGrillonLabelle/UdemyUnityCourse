@@ -259,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max: 1000
   min: 1
-  maxGuessesAllowed: 157
+  maxGuessesAllowed: 10
   isYourNumberTextElement: {fileID: 1349492656}
   guessTextElement: {fileID: 1462778959}
   thinkingTextElement: {fileID: 1265694487}

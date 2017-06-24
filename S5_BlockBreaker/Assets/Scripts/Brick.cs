@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class Brick : MonoBehaviour
 {
 	public Sprite[] hitSprites;
 	public AudioClip crackSound;
 	public float crackSoundVolume;
+	public GameObject smoke;
 
 	private int timesHit;
 	private SpriteRenderer spriteRenderer;
@@ -42,6 +44,7 @@ public class Brick : MonoBehaviour
 			var maxHits = hitSprites.Length + 1;
 			if (++timesHit >= maxHits)
 			{
+				SpawnSmoke();
 				Destroy(gameObject);
 				if (--breakableCount <= 0)
 				{
@@ -55,7 +58,27 @@ public class Brick : MonoBehaviour
 				{
 					spriteRenderer.sprite = newSprite;
 				}
+				else
+				{
+					Debug.LogErrorFormat(this,
+						"Brick Sprite missing at index: {0} for {1}. The hitSprites array is [{2}].",
+						timesHit - 1,
+						ToString(),
+						string.Join(", ", hitSprites.Select((s) => s == null ? "null" : s.name).ToArray()));
+				}
 			}
 		}
+	}
+
+	private void SpawnSmoke()
+	{
+		var smokePuff = Instantiate(smoke, transform.position + new Vector3(0, 0, -1), Quaternion.identity);
+		var main = smokePuff.GetComponent<ParticleSystem>().main;
+		var alpha = main.startColor.color.a;
+		main.startColor = new Color(
+			spriteRenderer.color.r,
+			spriteRenderer.color.g,
+			spriteRenderer.color.b,
+			alpha);
 	}
 }

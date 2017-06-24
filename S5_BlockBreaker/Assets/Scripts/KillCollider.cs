@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class KillCollider : MonoBehaviour
 {
@@ -13,11 +14,18 @@ public class KillCollider : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			levelManager.LoadLevel("Lose Screen");
+			StartCoroutine(YouLoseScript());
 		}
 		else
 		{
 			Destroy(other.gameObject);
 		}
+	}
+
+	private IEnumerator YouLoseScript()
+	{
+		yield return new WaitForSeconds(.75f);
+
+		levelManager.LoadLevel("Lose Screen");
 	}
 }
