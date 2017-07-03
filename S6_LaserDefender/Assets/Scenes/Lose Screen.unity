@@ -216,7 +216,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 11fbd2a18527f99468209334e8863771, type: 3}
     m_FontSize: 67
     m_FontStyle: 0
     m_BestFit: 0
@@ -310,101 +310,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &176244404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1378697948833988, guid: 81e782e145070144390238fd3b5b7aa4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1819214965}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 176244409}
-  - component: {fileID: 176244408}
-  - component: {fileID: 176244407}
-  - component: {fileID: 176244406}
-  - component: {fileID: 176244405}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &176244405
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 81385829236284332, guid: 81e782e145070144390238fd3b5b7aa4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1819214965}
-  m_GameObject: {fileID: 176244404}
-  m_Enabled: 1
---- !u!124 &176244406
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 124996005934215090, guid: 81e782e145070144390238fd3b5b7aa4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1819214965}
-  m_GameObject: {fileID: 176244404}
-  m_Enabled: 1
---- !u!92 &176244407
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 92300518514623758, guid: 81e782e145070144390238fd3b5b7aa4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1819214965}
-  m_GameObject: {fileID: 176244404}
-  m_Enabled: 1
---- !u!20 &176244408
-Camera:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 20947847043367786, guid: 81e782e145070144390238fd3b5b7aa4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1819214965}
-  m_GameObject: {fileID: 176244404}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 6
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
---- !u!4 &176244409
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4502685754652148, guid: 81e782e145070144390238fd3b5b7aa4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1819214965}
-  m_GameObject: {fileID: 176244404}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 6, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &401022927
 Prefab:
   m_ObjectHideFlags: 0
@@ -446,20 +351,13 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98c605b65754fc047b107da9ceb06b4b, type: 2}
-  m_RootGameObject: {fileID: 2060610434}
   m_IsPrefabParent: 0
---- !u!114 &401022928
+--- !u!114 &401022928 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114143014897861074, guid: 98c605b65754fc047b107da9ceb06b4b,
     type: 2}
   m_PrefabInternal: {fileID: 401022927}
-  m_GameObject: {fileID: 2060610434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 914b8a75977ed47209fdf798a93ddac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &822728645
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +468,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 11fbd2a18527f99468209334e8863771, type: 3}
     m_FontSize: 69
     m_FontStyle: 0
     m_BestFit: 0
@@ -648,36 +546,4 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81e782e145070144390238fd3b5b7aa4, type: 2}
-  m_RootGameObject: {fileID: 176244404}
   m_IsPrefabParent: 0
---- !u!1 &2060610434
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1361364226366574, guid: 98c605b65754fc047b107da9ceb06b4b,
-    type: 2}
-  m_PrefabInternal: {fileID: 401022927}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2060610435}
-  - component: {fileID: 401022928}
-  m_Layer: 0
-  m_Name: LevelManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2060610435
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4234485101447984, guid: 98c605b65754fc047b107da9ceb06b4b,
-    type: 2}
-  m_PrefabInternal: {fileID: 401022927}
-  m_GameObject: {fileID: 2060610434}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 386, y: 339.98676, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
