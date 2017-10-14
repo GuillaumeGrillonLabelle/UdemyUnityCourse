@@ -34,7 +34,7 @@ public class MusicManager : MonoBehaviour
 	{
 		var newLevelIndex = scene.buildIndex;
 
-		print("MusicPlayer: loaded level " + newLevelIndex);
+		//print("MusicPlayer: loaded level " + newLevelIndex);
 
 		if (newLevelIndex >= 0 && newLevelIndex < audioClips.Length)
 		{
@@ -48,7 +48,7 @@ public class MusicManager : MonoBehaviour
 				{
 					var loop = newClipInfo.loop;
 
-					print("MusicPlayer: playing " + (music.clip ? music.clip.name : "null") + " (looping: " + loop + ")");
+					//print("MusicPlayer: playing " + (music.clip ? music.clip.name : "null") + " (looping: " + loop + ")");
 					music.loop = loop;
 					music.Play();
 				}
