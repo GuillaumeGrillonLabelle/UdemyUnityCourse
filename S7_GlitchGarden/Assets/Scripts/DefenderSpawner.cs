@@ -17,10 +17,10 @@ public class DefenderSpawner : MonoBehaviour
 		if (defendersSelection.Selected != null)
 		{
 			var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			print(pos);
 			pos = new Vector3((int)(pos.x + 0.5f), (int)(pos.y + 0.5f), 0);
 			var d = Instantiate(defendersSelection.Selected.defender, defendersParent.transform);
 			d.transform.position = pos;
+			d.name += " " + d.GetInstanceID();
 		}
 	}
 

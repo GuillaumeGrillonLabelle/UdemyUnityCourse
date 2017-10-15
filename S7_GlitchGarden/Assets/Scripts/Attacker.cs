@@ -14,6 +14,7 @@ public class Attacker : MonoBehaviour
 	public float jumpingSpeed;
 	public float damage;
 	public float onTargetDeathStopAttackingAfter = .1f;
+	public float seenEverySeconds;
 
 	public event System.EventHandler OnDeath;
 
@@ -34,8 +35,6 @@ public class Attacker : MonoBehaviour
 
 			currentTarget = value;
 
-			//print(gameObject.name + " now has " + (currentTarget == null ? "null" : currentTarget.name) + " as target.");
-
 			if (currentTarget != null)
 			{
 				currentTarget.OnDeath += On_Target_Death;
@@ -45,8 +44,6 @@ public class Attacker : MonoBehaviour
 
 	private Animator animator;
 	private Health hp;
-
-	private MovementType currentMovementType;
 
 	void Start()
 	{
@@ -65,6 +62,8 @@ public class Attacker : MonoBehaviour
 		if (ev != null)
 			ev(this, System.EventArgs.Empty);
 
+		CurrentTarget = null;
+
 		Destroy(gameObject);
 	}
 
@@ -76,18 +75,10 @@ public class Attacker : MonoBehaviour
 	void Update()
 	{
 		transform.Translate(Vector3.left * currentSpeed * Time.deltaTime);
-
-		if (transform.position.x < -1)
-			transform.position = new Vector3(10, transform.position.y, transform.position.z);
 	}
 
 	public void SetMovement(MovementType m)
 	{
-		//if (m != currentMovementType)
-		//{
-		//	print(name + " SetMovement(" + m + ")");
-		//	currentMovementType = m;
-		//}
 		switch (m)
 		{
 			case MovementType.Stopped:

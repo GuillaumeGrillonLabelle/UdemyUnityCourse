@@ -152,6 +152,7 @@ MonoBehaviour:
   jumpingSpeed: 2
   damage: 5
   onTargetDeathStopAttackingAfter: 0.4
+  seenEverySeconds: 10
 --- !u!114 &114825919079603070
 MonoBehaviour:
   m_ObjectHideFlags: 1
