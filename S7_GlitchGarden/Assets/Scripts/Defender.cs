@@ -12,6 +12,7 @@ public class Defender : MonoBehaviour
 	public bool hasHitAnimation;
 	public GameObject projectile;
 	public Transform projectileOffset;
+    public int defenderCost = 100;
 
 	public event System.EventHandler OnDeath;
 

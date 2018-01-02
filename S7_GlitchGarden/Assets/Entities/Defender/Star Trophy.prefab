@@ -220,6 +220,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeJumpedOver: 0
+  hasHitAnimation: 0
+  projectile: {fileID: 0}
+  projectileOffset: {fileID: 0}
+  defenderCost: 10
 --- !u!212 &212539741278812510
 SpriteRenderer:
   m_ObjectHideFlags: 1

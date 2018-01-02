@@ -4,11 +4,12 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Text))]
 public class StarDisplay : MonoBehaviour {
     private Text text;
-    private int nbStars;
+    public int nbStars = 100;
+
+    public enum Status { SUCCESS, FAILURE }
 
     void Start () {
         text = GetComponent<Text>();
-        nbStars = 0;
         UpdateDisplay();
     }
 
@@ -23,14 +24,14 @@ public class StarDisplay : MonoBehaviour {
         UpdateDisplay();
     }
 
-    public bool UseStars(int amount)
+    public Status UseStars(int amount)
     {
         if (nbStars >= amount)
         {
             nbStars -= amount;
             UpdateDisplay();
-            return true;
+            return Status.SUCCESS;
         }
-        return false;
+        return Status.FAILURE;
     }
 }

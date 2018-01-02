@@ -148,9 +148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeJumpedOver: 1
-  canAttack: 0
   hasHitAnimation: 1
   projectile: {fileID: 0}
+  projectileOffset: {fileID: 0}
+  defenderCost: 10
 --- !u!114 &114369021260618242
 MonoBehaviour:
   m_ObjectHideFlags: 1
