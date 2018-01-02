@@ -43,8 +43,7 @@ public class GameTimer : MonoBehaviour {
     private IEnumerator GameOver()
     {
         isGameOver = true;
-
-
+        
         var loseCondition = FindObjectOfType<LoseCondition>();
         if (loseCondition != null)
         {

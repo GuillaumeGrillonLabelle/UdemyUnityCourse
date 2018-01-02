@@ -516,7 +516,7 @@ Transform:
   m_PrefabParentObject: {fileID: 4505869332283282, guid: be802cf048b34814bb35a0881a51d153,
     type: 2}
   m_PrefabInternal: {fileID: 1421190312}
---- !u!1001 &1928984621
+--- !u!1001 &2034768940
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2

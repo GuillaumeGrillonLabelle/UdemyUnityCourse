@@ -180,7 +180,7 @@ MonoBehaviour:
   hasHitAnimation: 0
   projectile: {fileID: 1670157631780924, guid: c068181ce3db1e54eb69a3803d5b62bd, type: 2}
   projectileOffset: {fileID: 4155614058153236}
-  defenderCost: 10
+  defenderCost: 20
 --- !u!114 &114883270231837124
 MonoBehaviour:
   m_ObjectHideFlags: 1

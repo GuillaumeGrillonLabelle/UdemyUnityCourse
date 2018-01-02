@@ -192,7 +192,7 @@ MonoBehaviour:
   hasHitAnimation: 0
   projectile: {fileID: 1670157631780924, guid: 9b0c39ab8f1f0904188cc776b32608c5, type: 2}
   projectileOffset: {fileID: 4494423836943800}
-  defenderCost: 10
+  defenderCost: 25
 --- !u!212 &212307993699543570
 SpriteRenderer:
   m_ObjectHideFlags: 1
