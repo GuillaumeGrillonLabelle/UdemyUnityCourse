@@ -21,8 +21,9 @@ public class Defender : MonoBehaviour
 	private bool canAttack;
 	private bool isAttacking;
 	private GameObject projectilesParent;
+    private StarDisplay starDisplay;
 
-	void Start()
+    void Start()
 	{
 		animator = GetComponent<Animator>();
 		hp = GetComponent<Health>();
@@ -34,6 +35,8 @@ public class Defender : MonoBehaviour
 		canAttack = projectile != null;
 
 		projectilesParent = GetOrCreateParentObject();
+
+        starDisplay = FindObjectOfType<StarDisplay>();
 	}
 
 	private bool IsAttacking
@@ -93,6 +96,11 @@ public class Defender : MonoBehaviour
 			p.transform.position = projectileOffset.position;
 		}
 	}
+
+    public void AddStars(int amount)
+    {
+        starDisplay.AddStars(amount);
+    }
 
 	private static GameObject GetOrCreateParentObject()
 	{
