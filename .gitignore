@@ -33,3 +33,4 @@ sysinfo.txt
 *.apk
 #*.unitypackage           je veux les commiter moi c'est fichiers là!
 /S7_GlitchGarden/.vs/S7_GlitchGarden/v15/Server/sqlite3
+/S8_BowlMaster/.vs/S8_BowlMaster/v15/Server/sqlite3
