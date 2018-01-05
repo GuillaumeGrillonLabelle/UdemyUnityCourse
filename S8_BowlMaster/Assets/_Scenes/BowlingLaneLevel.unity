@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 94094094}
   - component: {fileID: 94094093}
   - component: {fileID: 94094092}
+  - component: {fileID: 94094096}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -194,6 +195,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 3.8160002, y: 0, z: 0}
+--- !u!114 &94094096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94094091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce99551bd05ea564cbaf5621a9d70a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 2142872810}
+  offset: {x: 0, y: 34.8, z: -95.45}
+  maxFollowZ: 1829
 --- !u!1001 &804909814
 Prefab:
   m_ObjectHideFlags: 0
@@ -340,6 +355,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114751668163948010, guid: c308e3be7de193842a66e66994249697,
+        type: 2}
+      propertyPath: launchVelocity.z
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114751668163948010, guid: c308e3be7de193842a66e66994249697,
+        type: 2}
+      propertyPath: launchVelocity.x
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c308e3be7de193842a66e66994249697, type: 2}
   m_IsPrefabParent: 0
@@ -385,3 +410,9 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e199dc1a2644984fa94b8d55d00fc25, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2142872810 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114751668163948010, guid: c308e3be7de193842a66e66994249697,
+    type: 2}
+  m_PrefabInternal: {fileID: 922894171}
+  m_Script: {fileID: 11500000, guid: 4edac5c2b4647e145a3e78816accf9b4, type: 3}

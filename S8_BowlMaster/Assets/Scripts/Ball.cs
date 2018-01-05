@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(AudioSource))]
 public class Ball : MonoBehaviour {
-    public float launchVelocity = 200f;
+    public Vector3 launchVelocity = new Vector3(0, 0, 200f);
 
     private Rigidbody rigibBody;
     private AudioSource audioSource;
@@ -19,7 +17,7 @@ public class Ball : MonoBehaviour {
 
     public void LaunchBall()
     {
-        rigibBody.velocity = new Vector3(0, 0, launchVelocity);
+        rigibBody.velocity = launchVelocity;
         audioSource.Play();
     }
 }
