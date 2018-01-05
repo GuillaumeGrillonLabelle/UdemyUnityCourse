@@ -5,7 +5,7 @@ public class CameraController : MonoBehaviour {
     public Vector3 offset = new Vector3(0, 34.8f, -95.45f);
     public float maxFollowZ = 1829f;
 
-	void Update () {
+	void LateUpdate () {
         if (transform.position.z < maxFollowZ)
         {
             transform.position = ball.transform.position + offset;
