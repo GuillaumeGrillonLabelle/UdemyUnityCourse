@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(AudioSource))]
 public class Ball : MonoBehaviour {
+    public int delayBeforeLaunchingTheBall = 1;
     public Vector3 launchVelocity = new Vector3(0, 0, 1500f);
 
     private Rigidbody rigibBody;
@@ -14,7 +15,7 @@ public class Ball : MonoBehaviour {
         rigibBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         
-        LaunchBall(1);
+        LaunchBall(delayBeforeLaunchingTheBall);
     }
 
     public void LaunchBall(int delay)
@@ -24,6 +25,8 @@ public class Ball : MonoBehaviour {
 
     private IEnumerator LaunchBallCoroutine(int delay)
     {
+        rigibBody.isKinematic = true;
+
         yield return new WaitForSeconds(delay);
 
         DoLaunchBall();
@@ -31,6 +34,7 @@ public class Ball : MonoBehaviour {
 
     public void DoLaunchBall()
     {
+        rigibBody.isKinematic = false;
         rigibBody.velocity = launchVelocity;
         audioSource.Play();
     }
