@@ -4,19 +4,26 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(AudioSource))]
 public class Ball : MonoBehaviour {
-    public Vector3 launchVelocity = new Vector3(0, 0, 1500f);
+    [HideInInspector] public bool inPlay;
 
     private Rigidbody rigibBody;
     private AudioSource audioSource;
-    private Vector3 initialPosition;
 
     void Start ()
     {
         rigibBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
-        initialPosition = transform.position;
-        
+
+        inPlay = false;
         rigibBody.isKinematic = true;
+    }
+
+    public void ResetBall(Vector3 position)
+    {
+        inPlay = false;
+        rigibBody.isKinematic = true;
+        transform.position = position;
+        audioSource.Stop();
     }
 
     public void LaunchBall(float delay, Vector3 velocity)
@@ -26,9 +33,7 @@ public class Ball : MonoBehaviour {
 
     private IEnumerator LaunchBallCoroutine(float delay, Vector3 velocity)
     {
-        rigibBody.isKinematic = true;
-        transform.position = initialPosition;
-        audioSource.Stop();
+        inPlay = true;
 
         yield return new WaitForSeconds(delay);
 

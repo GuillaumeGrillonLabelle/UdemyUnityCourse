@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour {
     }
 
 	void LateUpdate () {
-        if (transform.position.z < maxFollowZ)
+        if (ball.transform.position.z < maxFollowZ)
         {
             transform.position = ball.transform.position + offset;
         }
